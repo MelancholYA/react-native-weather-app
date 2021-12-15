@@ -7,10 +7,7 @@ import { Text, useTheme } from 'react-native-paper';
 
 const Switcher = ({ toggle, dark }) => {
 	return (
-		<TouchableOpacity
-			style={style.switchContainer}
-			onLongPress={toggle}
-			onPressIn={toggle}>
+		<TouchableOpacity style={style.switchContainer} onPressIn={toggle}>
 			<View
 				style={{
 					...style.switchBall,
