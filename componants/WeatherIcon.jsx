@@ -49,7 +49,7 @@ const WeatherIcon = ({ code, temp, size }) => {
 		<Image
 			resizeMode='contain'
 			source={setIcon()}
-			style={{ height: size || 50, width: size || 70 }}
+			style={{ height: size || 100, width: size || 100 }}
 		/>
 	);
 };

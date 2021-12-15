@@ -7,13 +7,15 @@ import { Text, useTheme } from 'react-native-paper';
 
 const Switcher = ({ toggle, dark }) => {
 	return (
-		<View style={style.switchContainer}>
-			<TouchableOpacity
+		<TouchableOpacity
+			style={style.switchContainer}
+			onLongPress={toggle}
+			onPressIn={toggle}>
+			<View
 				style={{
 					...style.switchBall,
 					transform: [{ translateX: dark ? 0 : 45 }],
-				}}
-				onPress={toggle}>
+				}}>
 				<Image
 					source={
 						dark
@@ -22,8 +24,8 @@ const Switcher = ({ toggle, dark }) => {
 					}
 					style={{ height: 20, width: 20 }}
 				/>
-			</TouchableOpacity>
-		</View>
+			</View>
+		</TouchableOpacity>
 	);
 };
 
