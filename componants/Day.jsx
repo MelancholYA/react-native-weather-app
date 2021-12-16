@@ -1,10 +1,11 @@
 import moment from 'moment';
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import WeatherIcon from './WeatherIcon';
 
 const Day = ({ data, dark }) => {
+	console.log(data);
 	const style = StyleSheet.create({
 		container: {
 			padding: 10,
